@@ -13,7 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-          fetch-depth: '0'
+        token: ${{ secrets.GH_TOKEN }}
+        fetch-depth: '0'
 
     - name: Generate Git Tag
       id: generate_tag
